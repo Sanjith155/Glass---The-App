@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass- Your all in one companion</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+    <div class="user">
+        <img src="image/pngtree-code-lab-glass-tube-logo-inspiration-isolated-on-white-backgrou-png-image_1715158.jpg" alt="">
+        <h3>Glass</h3>
+        <p>Your all in one companion</p>
+    </div>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">Clock</a>
+        <a href="#services">Calender</a>
+        <a href="#portfolio">Calculator</a>
+        <a href="#contact">contact</a>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<div id="menu-btn" class="fas fa-bars"></div>
+
+<!-- theme toggler  -->
+
+<div id="theme-toggler" class="fas fa-moon"></div>
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>Glass</h3>
+        <p>The user - friendly, all in one companion</p>
+        
+    </div>
+
+   
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+    <div class="clock">
+        <div id="hour">00</div>
+        <span>:</span>
+        <div id="minute">00</div>
+        <span>:</span>
+        <div id="seconds">00</div>
+    </div>
+    <!--Script-->
+    <script src="script.js"></script>
+</section>
+
+<!-- about section ends -->
+
+<!-- services section starts  -->
+
+<section class="services" id="services">
+
+    <div class="calendar">
+        <div class="calendar-body">
+          <span class="month-name">Month</span>
+          <span class="day-name">Day</span>
+          <span class="date-number">00</span>
+          <span class="year">0000</span>
+        </div>
+      </div>
+  
+      <script type="text/javascript">
+      const dayNumber = new Date().getDate();
+      const year = new Date().getFullYear();
+      const dayName = new Date().toLocaleString("default", {weekday: "long"});
+      const monthName = new Date().toLocaleString("default", {month: "long"});
+  
+      document.querySelector(".month-name").innerHTML = monthName;
+      document.querySelector(".day-name").innerHTML = dayName;
+      document.querySelector(".date-number").innerHTML = dayNumber;
+      document.querySelector(".year").innerHTML = year;
+      </script>
+
+    
+</section>
+
+<!-- services section ends -->
+
+<!-- portfolio section starts  -->
+
+<section class="portfolio" id="portfolio">
+
+    <div class="container">
+        <form action="" name="calc" class="calculator">
+            <input type="text" readonly class="value" name="txt">
+            <span class="num clear" onclick="calc.txt.value = ''">c</span>
+            <span class="num" onclick="document.calc.txt.value +='/'">/</span>
+            <span class="num" onclick="document.calc.txt.value +='*'">*</span>
+            <span class="num" onclick="document.calc.txt.value +='7'">7</span>
+            <span class="num" onclick="document.calc.txt.value +='8'">8</span>
+            <span class="num" onclick="document.calc.txt.value +='9'">9</span>
+            <span class="num" onclick="document.calc.txt.value +='-'">-</span>
+            <span class="num" onclick="document.calc.txt.value +='4'">4</span>
+            <span class="num" onclick="document.calc.txt.value +='5'">5</span>
+            <span class="num" onclick="document.calc.txt.value +='6'">6</span>
+            <span class="num plus" onclick="document.calc.txt.value +='+'">+</span>
+            <span class="num" onclick="document.calc.txt.value +='1'">1</span>
+            <span class="num" onclick="document.calc.txt.value +='2'">2</span>
+            <span class="num" onclick="document.calc.txt.value +='3'">3</span>
+            <span class="num" onclick="document.calc.txt.value +='0'">0</span>
+            <span class="num" onclick="document.calc.txt.value +='00'">00</span>
+            <span class="num" onclick="document.calc.txt.value +='.'">.</span>
+            <span class="num" onclick="document.calc.txt.value =eval(calc.txt.value)">=</span>
+
+        </form>
+    </div>
+
+</section>
+
+<!-- contact section ends -->
+
+<div class="credits"> created by <span>Code Labs</span> 2021 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
